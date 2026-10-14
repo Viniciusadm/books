@@ -1,0 +1,35 @@
+package com.archieapps.books.ui.theme
+
+import androidx.compose.ui.graphics.Color
+
+val BrandBlue = Color(0xFF349EF4)
+val BrandBlueDark = Color(0xFF1B6FB8)
+val BrandAmber = Color(0xFFF4A93E)
+val CanvasLight = Color(0xFFF7F9FC)
+val SurfaceLight = Color(0xFFFFFFFF)
+val InkLight = Color(0xFF1A1D29)
+val InkMutedLight = Color(0xFF6B7280)
+val HairlineLight = Color(0xFFE3E7ED)
+val SproutGreen = Color(0xFF34C77B)
+
+val BlueWashLight = Color(0xFFE8F3FE)
+val AmberWashLight = Color(0xFFFDF1DE)
+val GreenWashLight = Color(0xFFE4F7EE)
+val AmberInkLight = Color(0xFF8A5714)
+val GreenInkLight = Color(0xFF14713F)
+val ElevatedLight = Color(0xFFF1F4F9)
+val DangerLight = Color(0xFFD64550)
+
+val BrandBlueOnDark = Color(0xFF7CC2F9)
+val BrandAmberOnDark = Color(0xFFF7BE6A)
+val CanvasDark = Color(0xFF11141B)
+val SurfaceDark = Color(0xFF181C25)
+val ElevatedDark = Color(0xFF212734)
+val InkDark = Color(0xFFECEFF5)
+val InkMutedDark = Color(0xFF9AA4B4)
+val HairlineDark = Color(0xFF2B3240)
+val SproutGreenOnDark = Color(0xFF54D493)
+val BlueWashDark = Color(0xFF16324B)
+val AmberWashDark = Color(0xFF3A2A11)
+val GreenWashDark = Color(0xFF10301F)
+val DangerDark = Color(0xFFEF8A92)

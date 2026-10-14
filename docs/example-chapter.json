@@ -1,0 +1,27 @@
+{
+  "book": "A Cidade das Marés",
+  "chapter": 1,
+  "chapter_title": "O farol apagado",
+  "characters": [
+    {
+      "name": "Iara",
+      "chapter_description": "Faroleira da ilha, desconfiada dos barcos que chegam à noite.",
+      "current_summary": "Faroleira da ilha que guarda o farol desde a morte do pai."
+    },
+    {
+      "name": "Tomé",
+      "chapter_description": "Aprendiz de Iara, curioso e falante.",
+      "current_summary": "Aprendiz de Iara que sonha em deixar a ilha."
+    },
+    {
+      "name": "Dona Lua",
+      "chapter_description": "Dona da taverna do porto, conta histórias antigas sobre as marés.",
+      "current_summary": "Dona da taverna do porto e memória viva da cidade."
+    }
+  ],
+  "events": [
+    "O farol se apaga sem motivo durante a tempestade.",
+    "Dona Lua conta a história da maré que nunca voltou.",
+    "Um barco sem tripulação aparece encalhado na praia."
+  ]
+}

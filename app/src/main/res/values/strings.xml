@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Books</string>
+
+    <string name="library_title">Biblioteca</string>
+    <string name="library_subtitle_empty">Nenhum livro importado</string>
+    <string name="library_empty_title">Sua estante está vazia</string>
+    <string name="library_empty_message">Importe os arquivos JSON de resumo de capítulo para começar a montar a biblioteca.</string>
+    <string name="library_empty_action">Importar capítulos</string>
+    <string name="action_import">Importar capítulos</string>
+    <string name="action_search">Buscar</string>
+    <string name="action_back">Voltar</string>
+    <string name="action_more">Mais opções</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_delete">Excluir</string>
+    <string name="action_merge">Unir</string>
+    <string name="action_clear">Limpar</string>
+
+    <string name="book_tab_chapters">Capítulos</string>
+    <string name="book_tab_characters">Personagens</string>
+    <string name="book_chapters_empty">Nenhum capítulo neste livro.</string>
+    <string name="book_characters_empty">Nenhum personagem registrado ainda.</string>
+    <string name="book_merge_characters">Unir personagens</string>
+    <string name="book_delete_title">Excluir o livro?</string>
+    <string name="book_delete_message">Todos os capítulos, personagens e acontecimentos de “%1$s” serão apagados do aplicativo.</string>
+
+    <string name="chapter_label">Capítulo %1$d</string>
+    <string name="chapter_label_prologue">Prólogo</string>
+    <string name="chapter_short">cap. %1$d</string>
+    <string name="chapter_short_prologue">prólogo</string>
+    <string name="chapter_badge_prologue">P</string>
+    <string name="chapter_untitled">Sem título</string>
+    <string name="chapter_characters_section">Personagens neste capítulo</string>
+    <string name="chapter_events_section">Acontecimentos</string>
+    <string name="chapter_characters_empty">Este capítulo não registrou personagens.</string>
+    <string name="chapter_events_empty">Este capítulo não registrou acontecimentos.</string>
+    <string name="chapter_delete_title">Excluir o capítulo?</string>
+    <string name="chapter_delete_message">O capítulo será apagado e a visão atual dos personagens envolvidos será recalculada.</string>
+    <string name="chapter_open_character">Ver personagem completo</string>
+
+    <string name="level_in_chapter">Neste capítulo</string>
+    <string name="level_current">Personagem agora</string>
+    <string name="character_history_section">Histórico por capítulo</string>
+    <string name="character_updated">Atualizado</string>
+    <string name="character_current_from_chapter">Consolidado a partir do %1$s</string>
+    <string name="character_appears_as">Aparece como “%1$s”</string>
+    <string name="character_no_description">Sem descrição neste capítulo.</string>
+
+    <string name="search_placeholder">Personagem, capítulo ou acontecimento</string>
+    <string name="search_hint">Digite ao menos duas letras para buscar.</string>
+    <string name="search_no_results">Nada encontrado para “%1$s”.</string>
+    <string name="search_section_characters">Personagens</string>
+    <string name="search_section_chapters">Capítulos</string>
+    <string name="search_section_events">Acontecimentos</string>
+    <string name="search_breadcrumb">%1$s · %2$s</string>
+
+    <string name="merge_step_target">Qual personagem manter?</string>
+    <string name="merge_step_source">Qual registro unir a “%1$s”?</string>
+    <string name="merge_confirm_title">Unir personagens?</string>
+    <string name="merge_confirm_message">O histórico de “%1$s” passa para “%2$s”, e o nome antigo fica guardado como apelido para os próximos imports.</string>
+    <string name="merge_needs_two">É preciso ter ao menos dois personagens para unir.</string>
+
+    <string name="import_report_title">Resultado do import</string>
+    <string name="import_stored">%1$s de %2$s importado</string>
+    <string name="import_replaced">%1$s de %2$s atualizado</string>
+    <string name="import_failed_unreadable">Não foi possível ler o arquivo</string>
+    <string name="import_failed_malformed">JSON inválido</string>
+    <string name="import_failed_missing_field">Campo obrigatório ausente ou vazio: %1$s</string>
+    <string name="import_failed_chapter_number">Número de capítulo inválido: %1$d</string>
+    <string name="import_in_progress">Importando…</string>
+
+    <plurals name="chapter_count">
+        <item quantity="one">%1$d capítulo</item>
+        <item quantity="other">%1$d capítulos</item>
+    </plurals>
+    <plurals name="character_count">
+        <item quantity="one">%1$d personagem</item>
+        <item quantity="other">%1$d personagens</item>
+    </plurals>
+    <plurals name="event_count">
+        <item quantity="one">%1$d acontecimento</item>
+        <item quantity="other">%1$d acontecimentos</item>
+    </plurals>
+    <plurals name="appearance_count">
+        <item quantity="one">Aparece em %1$d capítulo</item>
+        <item quantity="other">Aparece em %1$d capítulos</item>
+    </plurals>
+    <string name="library_up_to_chapter">até o %1$s</string>
+</resources>
