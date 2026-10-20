@@ -1,8 +1,12 @@
 package com.archieapps.books.navigation
 
+import android.net.Uri
 import androidx.compose.animation.EnterTransition
 import androidx.compose.animation.ExitTransition
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -13,6 +17,7 @@ import com.archieapps.books.ui.chapter.ChapterScreen
 import com.archieapps.books.ui.character.CharacterScreen
 import com.archieapps.books.ui.library.LibraryScreen
 import com.archieapps.books.ui.search.SearchScreen
+import kotlinx.coroutines.flow.StateFlow
 
 private const val ARG_BOOK_ID = "bookId"
 private const val ARG_CHAPTER_ID = "chapterId"
@@ -31,8 +36,18 @@ private object Routes {
 }
 
 @Composable
-fun BooksNavHost() {
+fun BooksNavHost(
+    pendingImports: StateFlow<List<Uri>>,
+    onImportsConsumed: () -> Unit,
+) {
     val navController = rememberNavController()
+    val imports by pendingImports.collectAsState()
+
+    LaunchedEffect(imports) {
+        if (imports.isNotEmpty()) {
+            navController.popBackStack(Routes.LIBRARY, inclusive = false)
+        }
+    }
 
     NavHost(
         navController = navController,
@@ -44,6 +59,8 @@ fun BooksNavHost() {
     ) {
         composable(Routes.LIBRARY) {
             LibraryScreen(
+                pendingImports = pendingImports,
+                onImportsConsumed = onImportsConsumed,
                 onOpenBook = { navController.navigate(Routes.book(it)) },
                 onOpenSearch = { navController.navigate(Routes.SEARCH) },
             )

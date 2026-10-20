@@ -1,5 +1,6 @@
 package com.archieapps.books.ui.library
 
+import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
@@ -30,6 +31,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -51,9 +53,12 @@ import com.archieapps.books.ui.components.chapterShortLabel
 import com.archieapps.books.ui.components.EmptyState
 import com.archieapps.books.ui.components.LoadingState
 import com.archieapps.books.ui.theme.LocalBooksPalette
+import kotlinx.coroutines.flow.StateFlow
 
 @Composable
 fun LibraryScreen(
+    pendingImports: StateFlow<List<Uri>>,
+    onImportsConsumed: () -> Unit,
     onOpenBook: (Long) -> Unit,
     onOpenSearch: () -> Unit,
 ) {
@@ -63,6 +68,14 @@ fun LibraryScreen(
     val books by viewModel.books.collectAsState()
     val importState by viewModel.importState.collectAsState()
     var pendingDeletion by remember { mutableStateOf<BookSummary?>(null) }
+    val imports by pendingImports.collectAsState()
+
+    LaunchedEffect(imports) {
+        if (imports.isNotEmpty()) {
+            viewModel.importFiles(imports)
+            onImportsConsumed()
+        }
+    }
 
     val picker = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.OpenMultipleDocuments(),
